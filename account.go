@@ -16,6 +16,8 @@ type User struct {
 	Name       string `column:"name" json:"name"`               // 昵称
 	Account    string `column:"account" json:"account"`         // 账号
 	Password   string `column:"password" json:"-"`              // 密码
+	Phone      string `column:"phone" json:"phone"`             // 电话
+	Email      string `column:"email" json:"email"`             // 邮箱
 	Picture    string `column:"picture" json:"picture"`         // 头像
 	Gender     int    `column:"gender" json:"gender"`           // 性别
 	Age        int    `column:"age" json:"age"`                 // 年龄
