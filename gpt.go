@@ -14,7 +14,9 @@ type AppChatConversationItem struct {
 type AppChatMessage struct {
 	Id             string `column:"id" json:"id"`
 	ConversationId string `column:"conversation_id" json:"conversationId"`
+	Picture        string `column:"picture" json:"picture"`
 	UserId         string `column:"user_id" json:"userId"`
+	ModelId        string `column:"model_id" json:"modelId"`
 	Role           string `column:"role" json:"role"`
 	Content        string `column:"content" json:"content"`
 	CreateTime     string `column:"create_time" json:"createTime"`
@@ -24,7 +26,7 @@ type LLmModel struct {
 	Id         string `column:"id" json:"id"`
 	Name       string `column:"name" json:"name"`
 	Model      string `column:"model" json:"model"`
-	Icon       string `column:"icon" json:"icon"`
+	Picture    string `column:"picture" json:"picture"`
 	Parameters string `column:"parameters" json:"parameters"`
 	Size       string `column:"size" json:"size"`
 	Download   string `column:"download" json:"download"`
