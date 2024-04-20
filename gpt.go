@@ -16,6 +16,7 @@ type AppChatMessage struct {
 	ConversationId string `column:"conversation_id" json:"conversationId"`
 	Picture        string `column:"picture" json:"picture"`
 	UserId         string `column:"user_id" json:"userId"`
+	MessageId      string `column:"message_id" json:"messageId"`
 	ModelId        string `column:"model_id" json:"modelId"`
 	Role           string `column:"role" json:"role"`
 	Content        string `column:"content" json:"content"`
