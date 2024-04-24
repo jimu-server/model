@@ -24,12 +24,13 @@ type AppChatMessage struct {
 }
 
 type LLmModel struct {
-	Id         string `column:"id" json:"id"`
-	Name       string `column:"name" json:"name"`
-	Model      string `column:"model" json:"model"`
-	Picture    string `column:"picture" json:"picture"`
-	Parameters string `column:"parameters" json:"parameters"`
-	Size       string `column:"size" json:"size"`
-	Download   string `column:"download" json:"download"`
-	CreateTime string `column:"create_time" json:"createTime"`
+	Id           string `column:"id" json:"id"`
+	Name         string `column:"name" json:"name"`
+	Model        string `column:"model" json:"model"`
+	Picture      string `column:"picture" json:"picture"`
+	Size         string `column:"size" json:"size"`
+	IsDownload   bool   `column:"is_download" json:"isDownload"`
+	Digest       string `column:"digest" json:"digest"`
+	ModelDetails string `column:"model_details" json:"modelDetails"`
+	CreateTime   string `column:"create_time" json:"createTime"`
 }
