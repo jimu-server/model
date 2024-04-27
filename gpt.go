@@ -25,6 +25,8 @@ type AppChatMessage struct {
 
 type LLmModel struct {
 	Id           string `column:"id" json:"id"`
+	Pid          string `column:"pid" json:"pid"`
+	UserId       string `column:"user_id" json:"userId"`
 	Name         string `column:"name" json:"name"`
 	Model        string `column:"model" json:"model"`
 	Picture      string `column:"picture" json:"picture"`
@@ -33,4 +35,14 @@ type LLmModel struct {
 	Digest       string `column:"digest" json:"digest"`
 	ModelDetails string `column:"model_details" json:"modelDetails"`
 	CreateTime   string `column:"create_time" json:"createTime"`
+}
+
+type AppChatKnowledgeFile struct {
+	Id         string `column:"id" json:"id"`
+	Pid        string `column:"pid" json:"pid"`
+	FileName   string `column:"file_name" json:"fileName"`
+	FilePath   string `column:"file_path" json:"filePath"`
+	FileType   int    `column:"file_type" json:"fileType"`
+	IsGen      string `column:"is_gen" json:"isGen"`
+	CreateTime string `column:"create_time" json:"createTime"`
 }
