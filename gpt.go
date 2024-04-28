@@ -47,3 +47,15 @@ type AppChatKnowledgeFile struct {
 	IsGen      bool   `column:"is_gen" json:"isGen"`
 	CreateTime string `column:"create_time" json:"createTime"`
 }
+
+func (receiver *AppChatKnowledgeFile) GetId() string {
+	return receiver.Id
+}
+
+func (receiver *AppChatKnowledgeFile) GetPid() string {
+	return receiver.Pid
+}
+
+func (receiver *AppChatKnowledgeFile) GetName() string {
+	return receiver.FileName
+}
