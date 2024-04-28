@@ -40,9 +40,10 @@ type LLmModel struct {
 type AppChatKnowledgeFile struct {
 	Id         string `column:"id" json:"id"`
 	Pid        string `column:"pid" json:"pid"`
+	UserId     string `column:"user_id" json:"userId"`
 	FileName   string `column:"file_name" json:"fileName"`
 	FilePath   string `column:"file_path" json:"filePath"`
 	FileType   int    `column:"file_type" json:"fileType"`
-	IsGen      string `column:"is_gen" json:"isGen"`
+	IsGen      bool   `column:"is_gen" json:"isGen"`
 	CreateTime string `column:"create_time" json:"createTime"`
 }
