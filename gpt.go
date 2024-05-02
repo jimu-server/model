@@ -70,6 +70,7 @@ type AppChatKnowledgeInstance struct {
 	KnowledgeDescription string `column:"knowledge_description" json:"knowledgeDescription"`
 	KnowledgeType        int    `column:"knowledge_type" json:"knowledgeType"`
 	CreateTime           string `column:"create_time" json:"createTime"`
+	Check                bool   `column:"check" json:"check"`
 }
 
 type EmbeddingAnalysis struct {
