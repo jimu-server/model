@@ -1,5 +1,7 @@
 package model
 
+import "os"
+
 type AppChatConversationItem struct {
 	Id         string `column:"id" json:"id"`
 	Picture    string `column:"picture" json:"picture"`
@@ -41,10 +43,10 @@ type AppChatKnowledgeFile struct {
 	Id         string `column:"id" json:"id"`
 	Pid        string `column:"pid" json:"pid"`
 	UserId     string `column:"user_id" json:"userId"`
+	Check      bool   `column:"check" json:"check"`
 	FileName   string `column:"file_name" json:"fileName"`
 	FilePath   string `column:"file_path" json:"filePath"`
 	FileType   int    `column:"file_type" json:"fileType"`
-	IsGen      bool   `column:"is_gen" json:"isGen"`
 	CreateTime string `column:"create_time" json:"createTime"`
 }
 
@@ -58,4 +60,21 @@ func (receiver *AppChatKnowledgeFile) GetPid() string {
 
 func (receiver *AppChatKnowledgeFile) GetName() string {
 	return receiver.FileName
+}
+
+type AppChatKnowledgeInstance struct {
+	Id                   string `column:"id" json:"id"`
+	UserId               string `column:"user_id" json:"userId"`
+	KnowledgeName        string `column:"knowledge_name" json:"knowledgeName"`
+	KnowledgeFiles       string `column:"knowledge_files" json:"knowledgeFiles"`
+	KnowledgeDescription string `column:"knowledge_description" json:"knowledgeDescription"`
+	KnowledgeType        int    `column:"knowledge_type" json:"knowledgeType"`
+	CreateTime           string `column:"create_time" json:"createTime"`
+}
+
+type EmbeddingAnalysis struct {
+	*AppChatKnowledgeFile
+	os.FileInfo
+	FileBody []byte `column:"file_body" json:"fileBody"`
+	Lines    []string
 }
