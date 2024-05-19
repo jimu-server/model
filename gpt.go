@@ -10,6 +10,7 @@ type AppChatConversationItem struct {
 	LastModel  string `column:"last_model" json:"lastModel"`
 	LastMsg    string `column:"last_msg" json:"lastMsg"`
 	LastTime   string `column:"last_time" json:"lastTime"`
+	Delete     int    `column:"delete" json:"delete"`
 	CreateTime string `column:"create_time" json:"createTime"`
 }
 
@@ -23,6 +24,7 @@ type AppChatMessage struct {
 	Role           string `column:"role" json:"role"`
 	Content        string `column:"content" json:"content"`
 	CreateTime     string `column:"create_time" json:"createTime"`
+	Delete         int    `column:"delete" json:"delete"`
 }
 
 type LLmModel struct {
