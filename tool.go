@@ -14,5 +14,6 @@ type Tool struct {
 	Path       string `column:"path" json:"path"`              // 工具路径 /{basePath}/{name}
 	Tip        string `column:"tip" json:"tip"`                // 提示语,一般填写工具名称
 	Position   int    `column:"position" json:"position"`      // 工具按钮位置信息 1:左侧 2:右侧
-	CreateTime string `column:"create_time" json:"createTime"` // 成立时间s
+	Status     bool   `column:"status" json:"status"`          // 是否启用
+	CreateTime string `column:"create_time" json:"createTime"` // 成立时间
 }

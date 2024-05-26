@@ -21,5 +21,6 @@ type User struct {
 	Picture    string `column:"picture" json:"picture"`         // 头像
 	Gender     int    `column:"gender" json:"gender"`           // 性别
 	Age        int    `column:"age" json:"age"`                 // 年龄
+	Status     bool   `column:"status" json:"status"`           // 是否启用
 	CreateTime string `column:"create_time" json:"create_time"` // 创建时间
 }
