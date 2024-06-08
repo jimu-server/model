@@ -10,6 +10,7 @@ type Router struct {
 	Path       string `column:"path" json:"path"`              // 路由路径
 	Remark     string `column:"remark" json:"remark"`          // 备注
 	Status     bool   `column:"status" json:"status"`          //状态
+	RouterType int    `column:"router_type" json:"routerType"` // 路由类型
 	Sort       int    `column:"sort" json:"sort"`              // 排序
 	ToolId     string `column:"tool_id" json:"toolId"`         // 工具id
 	CreateTime string `column:"create_time" json:"createTime"` // 成立时间
