@@ -81,3 +81,14 @@ type EmbeddingAnalysis struct {
 	FileBody []byte `column:"file_body" json:"fileBody"`
 	Lines    []string
 }
+
+// AppChatPlugin
+// GPT 插件实体
+type AppChatPlugin struct {
+	Id         string `column:"id" json:"id,omitempty"`
+	Name       string `column:"name" json:"name,omitempty"`
+	Icon       string `column:"icon" json:"icon,omitempty"`
+	Model      string `column:"model" json:"model,omitempty"`
+	Status     bool   `column:"status" json:"status"`
+	CreateTime string `column:"create_time" json:"createTime,omitempty"`
+}
