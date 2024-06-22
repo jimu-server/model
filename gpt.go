@@ -1,7 +1,5 @@
 package model
 
-import "os"
-
 type AppChatConversationItem struct {
 	Id         string `column:"id" json:"id"`
 	Picture    string `column:"picture" json:"picture"`
@@ -76,19 +74,21 @@ type AppChatKnowledgeInstance struct {
 }
 
 type EmbeddingAnalysis struct {
-	*AppChatKnowledgeFile
-	os.FileInfo
+	FileName string `column:"file_name" json:"fileName"`
 	FileBody []byte `column:"file_body" json:"fileBody"`
-	Lines    []string
+	Block    []string
 }
 
 // AppChatPlugin
 // GPT 插件实体
 type AppChatPlugin struct {
-	Id         string `column:"id" json:"id,omitempty"`
-	Name       string `column:"name" json:"name,omitempty"`
-	Icon       string `column:"icon" json:"icon,omitempty"`
-	Model      string `column:"model" json:"model,omitempty"`
+	Id         string `column:"id" json:"id"`
+	Name       string `column:"name" json:"name"`
+	Code       string `column:"code" json:"code"`
+	Icon       string `column:"icon" json:"icon"`
+	Model      string `column:"model" json:"model"`
+	FloatView  string `column:"float_view" json:"floatView"`
+	Props      string `column:"props" json:"props"`
 	Status     bool   `column:"status" json:"status"`
-	CreateTime string `column:"create_time" json:"createTime,omitempty"`
+	CreateTime string `column:"create_time" json:"createTime"`
 }
